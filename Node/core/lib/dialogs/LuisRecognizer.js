@@ -32,9 +32,9 @@ var LuisRecognizer = (function (_super) {
             var locale = context.locale || '*';
             var model = this.models.hasOwnProperty(locale) ? this.models[locale] : this.models['*'];
             if (!model) {
-                var dashIndex = locale.indexOf('-')
+                var dashIndex = locale.indexOf('-');
                 if (dashIndex >= 0) {
-                    locale = locale.substring(0, dashIndex)
+                    locale = locale.substring(0, dashIndex);
                     model = this.models.hasOwnProperty(locale) ? this.models[locale] : this.models['*'];
                 }
             }
