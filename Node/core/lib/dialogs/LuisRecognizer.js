@@ -30,7 +30,7 @@ var LuisRecognizer = (function (_super) {
         if (context && context.message && context.message.text) {
             var utterance = context.message.text;
             var locale = context.locale || '*';
-            var model = this.models.hasOwnProperty(locale) ? this.models[locale] : this.models['*'];
+            var model = this.models[locale];
             if (!model) {
                 var dashIndex = locale.indexOf('-');
                 if (dashIndex >= 0) {
